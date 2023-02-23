@@ -11,10 +11,10 @@
     <form action="create.php" method="post">
         <label for="colors">Kies 4 basiskleuren voor uw nagels:</label>
         <br>
-        <input type="color" name="colors" id="colors">
-        <input type="color" name="colors" id="colors">
-        <input type="color" name="colors" id="colors">
-        <input type="color" name="colors" id="colors">
+        <input type="color" name="colors[]" id="colors1">
+        <input type="color" name="colors[]" id="colors2">
+        <input type="color" name="colors[]" id="colors3">
+        <input type="color" name="colors[]" id="colors4">
         <br>
         <br>
         <label for="phonenr">Uw telefoon nummer:</label><br>
@@ -33,14 +33,14 @@
         <br>
         <label for="treatment">Soort behandeling:</label>
         <br>
-        <input type="checkbox" name="treatment" id="treatment">
+        <input type="checkbox" name="treatment[]" id="treatment" value="">
         <label for="treatment">Nagelbijt arrangement (termijnbetaling mogelijk) €180
         </label><br>
 
-        <input type="checkbox" name="treatment" id="treatment">
+        <input type="checkbox" name="treatment[]" id="treatment" value="Luxe manicure">
         <label for="treatment">Luxe manicure (massage en handpakking) €30,00</label><br>
 
-        <input type="checkbox" name="treatment" id="treatment">
+        <input type="checkbox" name="treatment[]" id="treatment" value="Nagelreparatie">
         <label for="treatment">Nagelreparatie per nagel (in eerste week gratis) €5,00</label><br>
 
         <br>

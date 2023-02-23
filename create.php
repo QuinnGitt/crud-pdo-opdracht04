@@ -28,12 +28,14 @@ $sql = "INSERT INTO Afspraak (kleuren
                             ,:datesubmit);";
 
 $statement = $pdo->prepare($sql);
+$colors = implode(",", $_POST['colors']);
+$treatment = implode("," ,$_POST['treatment'] );
 
-$statement->bindValue(':color', $_POST['colors'], PDO::PARAM_STR);
+$statement->bindValue(':color', $colors, PDO::PARAM_STR);
 $statement->bindValue(':phone', $_POST['phonenr'], PDO::PARAM_STR);
 $statement->bindValue(':mail', $_POST['mail'], PDO::PARAM_STR);
 $statement->bindValue(':afspr', $_POST['date'], PDO::PARAM_STR);
-$statement->bindValue(':treatments', $_POST['treatment'], PDO::PARAM_STR);
+$statement->bindValue(':treatments',$treatment , PDO::PARAM_STR);
 $statement->bindValue(':datesubmit', $_POST['dateSubmit'], PDO::PARAM_STR);
 
 $result = $statement->execute();

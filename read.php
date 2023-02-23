@@ -11,7 +11,8 @@
   } catch(PDOException $e) {
     echo $e->getMessage();
   }
-  $sql = "SELECT kleuren
+  $sql = "SELECT Id
+                ,kleuren
                 ,telnr
                 ,email
                 ,afspraak
@@ -35,12 +36,12 @@
                 <td>$info->behandeling</td>
                 <td>$info->datuminvoer</td>
                 <td>
-                    <a href='delete.php?Id=$info->afspraak'>
+                    <a href='delete.php?Id=$info->Id'>
                         <img src='img/b_drop.png' alt='kruis'>
                     </a>
                 </td>
                 <td>
-                    <a href='update.php?Id=$info->afspraak'>
+                    <a href='update.php?Id=$info->Id'>
                         <img src='img/b_edit.png' alt='potlood'>
                     </a>
                 </td>
